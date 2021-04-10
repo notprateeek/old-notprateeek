@@ -1,0 +1,72 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+// variables
+@mixin tags {
+  font-family: 'La Belle Aurore', cursive;
+  color: #515152;
+}
+
+// colors
+
+// local
+
+body::before,
+body::after {
+  white-space: pre-wrap;
+  position: absolute;
+  left: 0;
+  @include tags;
+}
+
+body::before {
+  content: '<html> \A <body>';
+  top: 0;
+}
+
+body::after {
+  content: '</body> \A </html>';
+  bottom: 0;
+}
+
+.head-heading::before,
+.head-heading::after {
+  font-size: 16px;
+  font-weight: normal;
+  white-space: pre-wrap;
+  position: absolute;
+  left: 0;
+  @include tags;
+}
+
+.head-heading::before {
+  content: '<h1>';
+  top: 60px;
+}
+
+.head-heading::after {
+  content: '</h1>';
+  bottom: 225px;
+  left: 170px;
+}
+
+h3::before,
+h3::after {
+  font-size: 16px;
+  font-weight: normal;
+  white-space: pre-wrap;
+  position: absolute;
+  left: 0;
+  @include tags;
+}
+
+h3::before {
+  content: '<p>';
+  top: 255px;
+}
+
+h3::after {
+  content: '</p>';
+  bottom: 145px;
+  left: 80px;
+}
